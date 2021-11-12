@@ -1,11 +1,10 @@
-VOWELS = /[aeiou]/
+VOWELS = (/[aeiou]/)
 
 def get_count(input_str)
     
-    input_str.match(VOWELS) { |m| input_str.new(*m.captures) }
-    puts match_data
-    return match_data
+  input_str.scan(VOWELS).length
+
   end
   
 
-puts get_count("aaaaaeeeiiidddddd")
+puts get_count("iiadddddd")
