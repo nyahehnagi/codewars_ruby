@@ -15,7 +15,7 @@ def isPrime(num)
         i+=2
       end
 
-    return true;
+    return true
 
  end
 
