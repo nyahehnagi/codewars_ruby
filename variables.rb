@@ -1,10 +1,12 @@
-ONE = 1
-TWO = 2
-THREE = 3
-FOUR = 4
-FIVE = 5
-SIX = 6
-SEVEN = 7
-EIGHT = 8
-NINE = 9
-TEN = 10
+ONE = 1.to_f
+TWO = 2.to_f
+THREE = 3.to_f
+FOUR = 4.to_f
+FIVE = 5.to_f
+SIX = 6.to_f
+SEVEN = 7.to_f
+EIGHT = 8.to_f
+NINE = 9.to_f
+TEN = 10.to_f
+
+puts THREE / TWO
