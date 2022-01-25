@@ -16,9 +16,30 @@ test_tweets.each do |tweet|
   puts tweet
 end
 
-# how do I do this with a regular expression.. and a one liner?
-# I want to turn the phrases into one regular expression like sucks|bad|etc 
-# TODO Work this out
-regexp = Regexp.new(banned_phrases.join("|"))
-match_data = regexp.match("President Presidentname is a danger to society. I hate that he's so bad - it sucks.")
-p match_data.captures
+
+# [1, 2, 3, 4, 5] => [2, 3, 4, 5, 6]
+input_array = [1, 2, 3, 4, 5]
+p input_array.map{|num| num + 1}
+
+add_one = Proc.new{|num| num + 1}
+p input_array.map &add_one
+
+p input_array.inject([]){|sum, number| sum << number + 1}
+
+#[1, 3, 5, 4, 2] => [1, 2, 3, 4, 5]
+input_array = [1, 3, 5, 4, 2]
+p input_array.sort 
+
+#[1, 3, 5, 4, 2] => [2, 3, 4, 5, 6]
+input_array = [1, 3, 5, 4, 2]
+p input_array.map{|num| num + 1}.sort
+
+#[1, 2, 3, 4, 5] => 15 (the sum)
+input_array = [1, 2, 3, 4, 5]
+p input_array.sum
+
+#[1, 2, 3, 4, 5] => 30 (twice the sum)
+input_array = [1, 2, 3, 4, 5] 
+p input_array.sum * 2
+
+
